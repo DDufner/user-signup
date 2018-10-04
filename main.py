@@ -33,7 +33,6 @@ def check_for_spaces(no_space):
 @app.route('/user_input', methods=['POST'])
 def validate_username():
     username=request.form['username']
-    # email=request.form['email']
     username_error=''
 
     if len(username) < 3:
@@ -68,23 +67,18 @@ def confirm_password():
     if confirmation !=password:
         confirmation_error="Passwords do no match"
     else:
-        #
-#can above be combined in this way or do I need to split up?  
-#     if verify != password:
-#         error="Passwords do not match"
-#     else: 
-#         verify= password 
-#     if not username_error and not password_error and not verify_error:
+        return True 
 
-# def confirm_email(email):
-#     if email=='':
-#         return True 
-#     else: 
-#         if i in range (len(email)):
-#             i==['a', '.']
-#             return True
-#         else:
-#             error="Password not valid"
+def confirm_email(email):
+    email=request.form['email']
+    if email=='':
+        return True 
+    else: 
+        if i in range (len(email)):
+            i==['a', '.']
+            return True
+        else:
+            error="Password not valid"
 
 @app.route('/user_input')
 def valid_username():
