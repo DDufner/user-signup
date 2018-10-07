@@ -17,10 +17,10 @@
                         </label>
                     </td>
                     <td>
-                        <input name="username" value=""
+                        <input name="username" value="{{username}}"
                         type="text">
                         <span class="error">{{username_error}}</span>
-                        <!--Add valication
+                        <!-- Add valication
                         #can't leave any fields empty 
                         #user name and PW can't have space
                         #longer than 3 but less than 20 characters
@@ -29,11 +29,11 @@
                         -to be valid, email needs:
                             '@''
                             '.'
-                            3-20 characters 
-                        -->
+                            3-20 characters  -->
+                        
                     </td>
                 </tr>
-                <!-- <tr>
+                <tr>
                     <td>
                         <label for="password">
                             Password
@@ -41,7 +41,7 @@
                     </td>
                     <td>
                         <input name="password" type="password">
-                        <span class="error">{email_error}</span>
+                        <span class="error">{{email_error}}</span>
                     </td>
                 </tr>
                 <tr>
@@ -52,7 +52,7 @@
                     </td>
                     <td>
                         <input name="confirmation" type="password">
-                        <span class="error">{verify_error}</span>
+                        <span class="error">{{verify_error}}</span>
                     </td>
                 </tr>
                 <tr>
@@ -63,9 +63,9 @@
                     </td>
                     <td>
                         <input name="email" type="email">
-                        <span class="error">{email_error}</span>
+                        <span class="error">{{email_error}}</span>
                     </td>
-                </tr> -->
+                </tr>
             </tbody>
         </table>
         <input type="submit">
